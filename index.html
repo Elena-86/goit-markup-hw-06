@@ -35,7 +35,7 @@
         </a>
         </li>        
         <li class="top">           
-            <a class="link our-contacts" href="tel:+380961111111">
+            <a class="link" href="tel:+380961111111">
                 <svg class="top-icon" width="10px" height="16px">
                 <use href="./images/symbol-defs.svg#.iconphone"></use>
             </svg>+38 096 111 11 11
@@ -52,7 +52,7 @@
          <section class="hero">
             <div class="hero-overlay">
         <h1 class="title">Эффективные решения для вашего бизнеса</h1>
-        <a class="button" href="#">Заказать услугу</a>
+        <button class="button" type="submit" data-modal-open>Заказать услугу</button>
     </div>
     </section>  
           
@@ -355,7 +355,7 @@
        <!--Логотип-->
        <div class="container-bottom">  
                
-            <div class="adress-part"> 
+            <div> 
     <a class="logo column" href="#"><span class="first-part">Web</span><span class="contrast">Studio</span></a>
        
     <address>
@@ -365,7 +365,7 @@
            <li class="item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
         </ul>    
     </address> 
-    </div>
+     </div> 
      <div class="offer-part"> 
     <h3 class="offer-title">присоединяйтесь</h3>   
         <ul >
@@ -403,46 +403,48 @@
               </li>
          </ul>
          
-        </div> 
-        <div class="footer-form">        
-        <form class="mail-form">                 
-            <label class="footer-label" for="email">Подпишитесь на рассылку</label>
-            <input class="footer-input" type="email" name="email" id="email" placeholder="E-mail">          
-        </form>  
-        </div>        
-        <button class="subscribe-button">Подписаться
-            <svg class="button-icon" width="24px" height="24px">
-                <use href="./images/symbol-defs.svg#.iconpaperPlane"></use>
-            </svg>
-        </button>      
-        
+        </div>               
+        <form class="mail-form">  
+       <div class="footer-form">
+            <p class="footer-information">Подпишитесь на рассылку</p>
+            <input class="footer-input" type="email" placeholder="E-mail">          
+        </div>
+            <button class="subscribe-button">Подписаться
+        <svg class="button-icon" width="24px" height="24px">
+            <use href="./images/symbol-defs.svg#.iconpaperPlane"></use>
+        </svg>
+    </button>
+        </form>       
 </div> 
 </footer>
-<div class="backdrop is-hidden"></div>
-<div class="modal is-hidden ">
-    <button class="button-close">
+
+<div class="backdrop is-hidden" data-modal>
+<div class="backdrop"></div>
+
+<div class="modal">    
+    <form class="modal-form">
+    <button class="button-close" data-modal-close>
         <svg class="close-icon" width="11px" height="11px">
             <use href="./images/symbol-defs.svg#.iconVector-1"></use>
         </svg>
-    </button>
-    <form class="modal-form">
-    <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3> 
+    </button>  
+    <p class="modal-information">Оставьте свои данные, мы вам перезвоним</p> 
     <div class="inputGroup">  
-    <label for="name">Имя</label>
+    <label class="formLabel" for="name">Имя</label>
     <div class="modalField">
     <input class="modalInput" type="text" name="name" id="name">
     <svg class="formIcon" width="12px" height="12px">
         <use href="./images/symbol-defs.svg#.iconformFigure"></use>
     </svg>
     </div>    
-    <label for="tel">Телефон</label>
+    <label class="formLabel" for="tel">Телефон</label>
     <div class="modalField">
     <input class="modalInput" type="tel" name="telephone" id="tel">
     <svg class="formIcon" width="13px" height="13px">
         <use href="./images/symbol-defs.svg#.iconformPhone"></use>
     </svg>
     </div>    
-    <label for="mail">Почта</label>
+    <label class="formLabel" for="mail">Почта</label>
     <div class="modalField">
     <input class="modalInput" type="email" name="mail" id="mail">
     <svg class="formIcon" width="15px" height="12px">
@@ -450,7 +452,7 @@
     </svg>
     </div>
     </div>
-    <label for="comment">Комментарий</label>
+    <label class="formLabel" for="comment">Комментарий</label>
     <textarea class="modalTextarea" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
     
     <div class="checkGroup">    
@@ -463,9 +465,9 @@
         </svg>                   
         </div>  
     <button class="modalButton" type="submit">Отправить</button>
-</form>
+     </form>   
 </div>
-<script src="./js/modal.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>
 
